@@ -437,9 +437,12 @@ rm -rf ../hotfix
 
 ---
 
-#[fit].
+#[fit]
 #[fit] Thank You
 
 Tomasz Gebarowski
 @tgebarowski
 github.com/tgebarowski/
+
+presentation:
+https://github.com/tgebarowski/mobile-warsaw-git-presentation
