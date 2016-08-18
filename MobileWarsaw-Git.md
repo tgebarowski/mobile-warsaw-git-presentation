@@ -332,7 +332,27 @@ Source: http://nvie.com/posts/a-successful-git-branching-model/
 
 ---
 
+# Proper starting point
+
+- Always branch off from from oldest ancestor, to incorporate feature in all children branches
+
+![inline](images/diagram-branching.png)
+
+---
+
 # Branch difference tracking (1)
+
+After incorporating changes, this should *ALWAYS* return empty results:
+
+`git log --no-merges develop..master`
+
+`git log --no-merges develop..release-1.8`
+
+![right](images/diagram-branch-inclusion.png)
+
+---
+
+# Branch difference tracking (2)
 
 Lists commits that are in release-1.2 but not in master:
 
@@ -341,17 +361,6 @@ Lists commits that are in release-1.2 but not in master:
 Lists commits that are in develop but not in master:
 
 `git log --no-merges master..develop`
-
----
-
-# Branch difference tracking (2)
-
-This should *ALWAYS* return empty results in proper git flow:
-
-`git log --no-merges develop..master`
-
-![right](images/diagram-branch-inclusion.png)
-
 
 ---
 
@@ -375,7 +384,7 @@ git branch --no-merged develop
 
 #[fit] 😱
 
-- Cherry-pick is not a golden bullet
+- Cherry-pick is not a silver bullet
 - It generates new hash every time
 - Do not cherry-pick changes between develop, master and release- branches because git will treat those changes as independent, not related commits
 
