@@ -392,7 +392,7 @@ git branch --no-merged develop
 
 # when to use cherry-pick?
 
-- when there is no other choice and changes can't be integrated easily
+- when there is no other choice and changes can't be integrated easily (backporting)
 - when working with your local branches
 
 ---
